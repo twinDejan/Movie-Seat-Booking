@@ -143,12 +143,40 @@ p.text span {
   padding-top: 12px;
 }
 
-#purchaseBtn:focus {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  transition-delay: 0s;
-  transition-duration: 0.25s;
-  transition-property: transform;
-  transition-timing-function: ease-in-out;
+.wrapper {
+  position: relative;
+}
+
+#purchaseBtn span {
+  position: relative;
+  z-index: 2;
+}
+
+#purchaseBtn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 65%;
+  line-height: 20px;
+  border-bottom-left-radius: 35.991px;
+  border-bottom-right-radius: 35.991px;
+  border-top-left-radius: 35.991px;
+  border-top-right-radius: 35.991px;
+  background: #6feaf6;
+  transition: all 0.35s;
+}
+
+#purchaseBtn:hover {
+  color: #fff;
+  text-shadow: 0 0 0.5px #000;
+}
+
+#purchaseBtn:hover:after {
+  height: 62%;
+  width: 100%;
+  margin-top: 22px;
 }
 
 .purchase-container {
